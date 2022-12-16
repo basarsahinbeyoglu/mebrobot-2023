@@ -225,7 +225,7 @@
             <div id="leftmenu" class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark fixed-bar" style="overflow-y:auto;">
                 <p class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <!--PROJECT NAME-->
-                    Şehir Lambalarını Yerleştirelim
+                    MEB Robot 2023 Eğitimi Bölüm 1
                 </p>
                 <hr />
                 <ol class="nav nav-pills flex-column mb-auto">
@@ -280,7 +280,7 @@
                             div.innerHTML = start_content;
                         };
                         
-                        var start_url = "/mini-browser//workspace/src/_lib/edusimsteam_main_docs/documentation/htmls/Start.html";
+                        var start_url = "/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/htmls/Start.html";
                         fetch(start_url)
                             .then(resp => {return resp.text()})
                             .then(data => {
@@ -401,7 +401,7 @@
                 document.getElementById('next-button').style.visibility = 'visible'
             }
 
-            var url = "/mini-browser//workspace/src/_lib/edusimsteam_main_docs/documentation/htmls/"+String(e)+".html";
+            var url = "/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/htmls/"+String(e)+".html";
             get_data_deploy(url);
             updateAchievements();
         }
@@ -430,7 +430,7 @@
             var prevMenu = $(`.nav-link[id=${page_id}]`);
             //var prevSection = $(`section[id=${activeSection.attr('id') - 1}]`);
             //var prevMenu = $(`.nav-link[id=${activeMenu.attr('id') - 1}]`);
-            var url = "/mini-browser//workspace/src/_lib/edusimsteam_main_docs/documentation/htmls/"+String(page_id)+".html";
+            var url = "/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/htmls/"+String(page_id)+".html";
             if (String(parseInt(activeMenu.attr('id'))-1) == 11){
                 
                 document.getElementById("myframe").src = url;
@@ -477,7 +477,7 @@
             var nextSection = $(`section[id=${page_id}]`);
             var nextMenu = $(`.nav-link[id=${page_id}]`);
             console.log(activeMenu.attr('id'))
-            var url = "/mini-browser//workspace/src/_lib/edusimsteam_main_docs/documentation/htmls/"+String(page_id)+".html";
+            var url = "/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/htmls/"+String(page_id)+".html";
             console.log(url);
             get_data_deploy(url);
             if (nextMenu.length) {
