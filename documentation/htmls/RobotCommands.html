@@ -17,7 +17,7 @@
       <h5>Aşağıdaki resimde robotumuz üzerinde yer alan sensörler ve bu sensörlerin komutları yer almaktadır. Robotumuzun üzerinde 4 adet mesafe sensörü ve ve alt köşelerinde yer alan siyah ve beyaz rengi ayırt edebilen 4 adet renk sensörü bulunmaktadır.</h5>
 
       <p></p>
-        <img src="https://github.com/basarsahinbeyoglu/MEB/blob/main/mini_sumo/Sumo_Sensorler.jpg?raw=true"
+        <img src="/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/images/Sumo_Commands.png"
 
           alt="" title="MEB Sumo Sensorler">
       <p></p>
@@ -42,7 +42,7 @@
             durumunda True, çalışmıyor olması durumunda False değerini alır.</td>
         </tr>
         <tr>
-          <td><em style="color: red;">robot.move(linear_speed)</em></td>
+          <td><em style="color: red;">robot.move(x)</em></td>
           <td>Robotu ileriye doğru x ile girilen nümerik değer hızında (m/s)
             hareket ettirir. x pozitif ise robot ileriye gider, negatifse geriye
             doğru gider.</td>
@@ -55,58 +55,49 @@
         </tr>
         <tr>
           <td><em style="color: red;">robot.sleep(x)</em></td>
-          <td>x saniye süre boyunca kodu/robotu uyutur.</td>
+          <td>x saniye süre boyunca kodu uyutur.</td>
         </tr>
         <tr>
-          <td><em style="color: red;">robot.front</em> </td>
+          <td><em style="color: red;">robot.front()</em> </td>
           <td>Ön mesafe sensörünün verisini metre cinsinden float değer olarak
             verir.<br>
           </td>
         </tr>
         <tr>
-          <td><em style="color: red;">robot.left</em> </td>
+          <td><em style="color: red;">robot.left()</em> </td>
           <td>Sol mesafe sensörünün verisini metre cinsinden float değer olarak
             verir.</td>
         </tr>
         <tr>
-          <td><em style="color: red;">robot.right</em></td>
+          <td><em style="color: red;">robot.right()</em></td>
           <td>Sağ mesafe sensörünün verisini metre cinsinden float değer olarak
             verir.</td>
         </tr>
         <tr>
-          <td><em style="color: red;">robot.back</em></td>
+          <td><em style="color: red;">robot.back()</em></td>
           <td>Arka mesafe sensörünün verisini metre cinsinden float değer olarak
             verir.</td>
         </tr>
         <tr>
-          <td><em style="color: red;">robot.front_left_color</em></td>
+          <td><em style="color: red;">robot.front_left_color()</em></td>
           <td>Robotun sol ön renk sensörünün algıladığı renk bilgisini 0 (siyah)
             ve 1 (beyaz) olarak verir.</td>
         </tr>
         <tr>
-          <td><em style="color: red;"></em><em style="color: red;">robot.front_right_color</em></td>
+          <td><em style="color: red;"></em><em style="color: red;">robot.front_right_color()</em></td>
           <td>Robotun sağ ön renk sensörünün algıladığı renk bilgisini 0 (siyah)
             ve 1 (beyaz) olarak verir.</td>
         </tr>
         <tr>
-          <td><em style="color: red;">robot.back_left_color</em></td>
+          <td><em style="color: red;">robot.back_left_color()</em></td>
           <td>Robotun sol arka renk sensörünün algıladığı renk bilgisini 0
             (siyah) ve 1 (beyaz) olarak verir. </td>
         </tr>
         <tr>
-          <td><em style="color: red;"></em><em style="color: red;">robot.back_right_color</em>
+          <td><em style="color: red;"></em><em style="color: red;">robot.back_right_color()</em>
           </td>
           <td>Robotun sağ arka renk sensörünün algıladığı renk bilgisini 0
             (siyah) ve 1 (beyaz) olarak verir. </td>
-        </tr>
-        <tr>
-          <td><em style="color: red;">robot.time</em></td>
-          <td>Raundun başladığı andan itibaren geçen süreyi saniye cinsinden
-            verir.</td>
-        </tr>
-        <tr>
-          <td><em style="color: red;">robot.round</em></td>
-          <td>Kaçıncı raundun (1'den itibaern) oynandığı bilgisini verir.</td>
         </tr>
       </tbody>
     </table>
