@@ -318,10 +318,21 @@
                         var start_content = ""
                         var obj = document.getElementById("myframe");
                         var div = document.getElementById("sections");
+                      
+                        var setInnerHTML = function(elm, html) {
+                            elm.innerHTML = html;
+                            Array.from(elm.querySelectorAll("script")).forEach( oldScript => {
+                                const newScript = document.createElement("script");
+                                Array.from(oldScript.attributes)
+                                .forEach( attr => newScript.setAttribute(attr.name, attr.value) );
+                                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                                oldScript.parentNode.replaceChild(newScript, oldScript);
+                            });
+                            }
 
                         function deploy_first_page() {
                             console.log("First Page");
-                            div.innerHTML = start_content;
+                            setInnerHTML(div,start_content);
                         };
                         
                         var start_url = "/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/htmls/Start.html";
@@ -376,6 +387,17 @@
         Array.from(menu_list).forEach(item=>{
             console.log(item.getAttribute("id"));
         });
+          
+        var setInnerHTML = function(elm, html) {
+            elm.innerHTML = html;
+            Array.from(elm.querySelectorAll("script")).forEach( oldScript => {
+                const newScript = document.createElement("script");
+                Array.from(oldScript.attributes)
+                .forEach( attr => newScript.setAttribute(attr.name, attr.value) );
+                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                oldScript.parentNode.replaceChild(newScript, oldScript);
+            });
+            }
 
         function get_data_deploy(url) {
             console.log("new_page");
@@ -384,7 +406,7 @@
                 .then(data => {
                 //this is the HTML file
                     var x = String(data);
-                    div.innerHTML = x;
+                    setInnerHTML(div,x);
                     //console.log(x);
                     //obj.contentDocument.write(x);
                     //obj.contentDocument.close();                
