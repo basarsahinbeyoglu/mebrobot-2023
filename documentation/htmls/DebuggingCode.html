@@ -13,11 +13,18 @@
     </h5>
      <br>
     
-    <img style="width: 80%;max-width: 400px" src="/mini-browser//workspace/src/_lib/edusimsteam_main_docs/documentation/images/Light_Sensor_Detail.png"
-        alt="" title="LightPlacement">
+     <video id="video" style="width: 100%; max-width: 800px;   border:1px solid black;box-shadow: 5px 5px gray;" controls>
+        <source id="video-source" src="/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/videos/DebuggingCode.mp4" type=video/mp4>
+    </video>
+    
+    <script>
+        var video_path = window.location.protocol + "//" + window.location.host.replace("-8888.", "-8000.") + "/project/mebrobot-2023/documentation/videos/";
+        document.getElementById("video").src = String(video_path + "DebuggingCode.mp4");
+    </script>
     
   <h5>Terminal print() fonksiyonu çıktılarını vermenin yanında eğer kodumuzda bir hata varsa, bu hatayı bulmamızda bize yardımcı olur.
    Öncelikle iki farklı hata türü vardır:</h5>
+    
       <ul>
       <li>
         <h5>Söz Dizimi Hataları (Syntax Errors)</h5>
@@ -30,16 +37,12 @@
      <br>
   
     <h5>Sözdiziminde bir hata yaparsak, terminal ilgili satırdaki söz dizimini anlayamadığını bize belirtir. Biz de satır numarası üzerinden nasıl bir söz dizimi hatası yaptığımızı bulabiliriz.</h5>
-  
-   <img style="width: 80%;max-width: 400px" src="/mini-browser//workspace/src/_lib/edusimsteam_main_docs/documentation/images/Light_Sensor_Detail.png"
-        alt="" title="LightPlacement">
+ 
     <br>
   
   <h5>Eğer kodumuzda fonksiyonel bir hata varsa, örnek olarak robotun sahip olmadığı bir komut yazarsak, terminal yine satır numarasını belirterek bize bir hata çıktısı verir. Biz de bu satır numarasına bakarak neyi yanlış yaptığımızı anlayabiliriz:</h5> 
     <br>
-  <img style="width: 80%;max-width: 400px" src="/mini-browser//workspace/src/_lib/edusimsteam_main_docs/documentation/images/Light_Sensor_Detail.png"
-        alt="" title="LightPlacement">
   
-    <br>
      <h5> Böylelikle hata ayıklama bölümünün sonuna geldik. Aşağıdaki Next tuşuna basarak bir sonraki bölüme geçelim.</h5>
 </section>
+
