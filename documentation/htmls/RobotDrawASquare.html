@@ -1,4 +1,4 @@
-<section class="active" id="1">
+    <section class="active" id="1">
     <div class="pb-3 mb-4 border-bottom">
     <div class="d-flex align-items-center text-dark text-decoration-none">
         <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -12,12 +12,19 @@
         Bu dersimizde önceki bölümlerde öğrendiğimiz bilgileri birleştirerek, robotun bir kare çizmesini sağlayacağız. Bunun için aşağıdaki videoyu birlikte izleyelim. 
     </h5>
      <br>
-    
-    <img style="width: 80%;max-width: 400px" src="/mini-browser//workspace/src/_lib/edusimsteam_main_docs/documentation/images/Light_Sensor_Detail.png"
-        alt="" title="LightPlacement">
-    <h5>Videoda aktarıldığı üzere kod satırları sırayla çalışmaktadır. Her satır sırayla işleme alınır. İşlenecek bir satır kalmadığı zaman kod ve simülasyon sonlanır. 
-      İleriki bölümlerde bu işlem sırasını kontrol etmeyi de öğreneceğiz. 
-       
+     <video id="video" style="width: 100%; max-width: 800px;   border:1px solid black;box-shadow: 5px 5px gray;" controls>
+        <source id="video-source" src="/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/videos/RobotDrawASquare.mp4" type=video/mp4>
+    </video>
+
+    <script>
+        var video_path = window.location.protocol + "//" + window.location.host.replace("-8888.", "-8000.") + "/project/mebrobot-2023/documentation/videos/";
+        document.getElementById("video").src = String(video_path + "RobotDrawASquare.mp4");
+    </script>
+      <br>
+      <br>
+      <h5>Şimdi öğrendiklerinizi uygulayarak robota bir kare çizdirin. Görevi doğru şekilde yaparsanız aşağıdaki görev tamamlanarak tiklenecektir.</h5>
+     <br>
+     <div data-achievement-id="221" class="achievement" style="background-color: #F8F8FF;">Robota Kare Çizdirme</div>
      <br>
      <h5> Aşağıdaki Next tuşuna basarak bir sonraki bölüme geçelim.</h5>
 </section>
