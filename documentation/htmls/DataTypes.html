@@ -12,20 +12,15 @@
         Bu dersimizde sonraki derslerimizde önemli olacak veri tiplerinden bahsedeceğiz. Bunun için aşağıdaki videoyu birlikte izleyelim. 
     </h5>
      <br>
-    
-    <img style="width: 100%;" src="/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/images/DataTypes_1.png"
-        alt="" title="LightPlacement">
-    
-  <h5>Bilgisayar koddaki verileri, bu verilerin tiplerine göre işler ve bir çıktı oluşturur. Metin, tam sayı, ondalıklı sayı ve mantık veri tipleri temel veri tipleri arasındadır:</h5>     
-     <br>
-   <img style="width: 100%;" src="/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/images/DataTypes_1.png"
-        alt="" title="LightPlacement">
+     <video id="video" style="width: 100%; max-width: 800px;   border:1px solid black;box-shadow: 5px 5px gray;" controls>
+        <source id="video-source" src="/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/videos/PrintToTerminal.mp4" type=video/mp4>
+    </video>
+    <script>
+        var video_path = window.location.protocol + "//" + window.location.host.replace("-8888.", "-8000.") + "/project/mebrobot-2023/documentation/videos/";
+        document.getElementById("video").src = String(video_path + "PrintToTerminal.mp4");
+    </script>
     <br>
-  <h5>Bir verinin tipini öğrenmek için type() fonksiyonu kullanılır. Aşağıdaki resimde bazı örnek verilerin tipleri terminal çıktısı olarak alınmıştır:</h5> 
-    <br>
-    <img style="width: 100%;" src="/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/images/DataTypes_2.png"
-    alt="" title="LightPlacement">
-  
+  <h5>Bilgisayar koddaki verileri, bu verilerin tiplerine göre işler ve bir çıktı oluşturur. Metin, tam sayı, ondalıklı sayı ve mantık veri tipleri temel veri tipleri arasındadır. Bir verinin tipini öğrenmek için ise type() fonksiyonu kullanılır.</h5>     
     <br>
      <h5> Robot komutlarında yer alan "robot.is_ok()" komutunun veri tipinin mantık veri tipi olduğunu farkettiniz mi? Bu komut simülasyon çalıştığı sürece Doğru yani True değerini verir. Bu bilgi bir sonraki dersimizde işimize yarayacak. Aşağıdaki Next tuşuna basarak bir sonraki bölüme geçelim.</h5>
 </section>
