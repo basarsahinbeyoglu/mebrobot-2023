@@ -10,67 +10,33 @@
     <!-- <video id="video" style="width: 100%; max-width: 800px;   border:1px solid black;box-shadow: 5px 5px gray;" controls>
         <source id="video-source" src="project/videos/LineFollower.mp4" type=video/mp4>
     </video> -->
-  
-    <script>
-        var video_path = window.location.protocol + "//" + window.location.host.replace("-8888.", "-8000.") + "/project/rrl_season_3_exports/documentation/videos/";
-        var image_path = window.location.protocol + "//" + window.location.host.replace("-8888.", "-8000.") + "/project/rrl_season_3_exports/documentation/images/";
-        // document.getElementById("video").src = String(video_path + "LineFollower.mp4");
-        document.getElementById("start_png").src = String(image_path + "Start.png");
-        document.getElementById("terminal_png").src = String(image_path + "Terminal.png");
-        document.getElementById("user_code").src = String(image_path + "UserCode.png");
-        document.getElementById("sim_screen").src = String(image_path + "SimScreen.png");
-    </script>
-
-    <br>
-    <br>
-    <h4>
-        Simülasyonu Başlat:
-      </h4>
-      <p>Simülasyonu başlatmak için <b>Start Simulation</b> butonuna basın</p>
-      <div style="width: 50%; max-width: 200px;">
-        <img id="start_png" src="https://gitlab.com/acrome-colab/riders-content/content-media/-/raw/master/ChallengeImages/RRL/Start.png"
-        alt="" title="">
-    </div>
-    
-    <h4>
-        Kodu Aç:
-    </h4>
-
-    <p>
-      Kodunuzu açmak için <b>Open User Code</b> Butonuna basın
-    </p>
-    
-    <div style="width: 50%; max-width: 200px;">
-      <img id="user_code"src="https://gitlab.com/acrome-colab/riders-content/content-media/-/raw/master/ChallengeImages/RRL/UserCode.png"
-      alt="" title="">
-    </div>
     
     <h4>
         Simülasyon Ekranı:
     </h4>
-    
-    <img id="sim_screen"src="https://gitlab.com/acrome-colab/riders-content/content-media/-/raw/master/ChallengeImages/RRL/UserCode.png"
-      alt="" title="">
-
-    <p> <b>1 numara</b> ile gösterilen butona tıklayarak simülasyon kameraları arasında geçiş yapabilirsiniz.</p>
-    <p> <b>2 numara</b> ile gösterilen butona tıklayarak terminal ekranını açabilirsiniz.</p>
-    <p> <b>3 numara</b> ile gösterilen butona tıklayarak simülasyonu başlatabilirsiniz.</p>
-    <p> <b>4 numara</b> ile gösterilen alanda robotunuzun üzerindeki kameranın çıktısını görebilirsiniz.
-    Kamera tek boyut ve 16 pikselden oluşur. Her piksel 0 ve 255 arasında bir parlaklık değerini temsil eder.
-    </p>
-
-    <h5>
-        Simülasyon Başladıktan Sonra:
-    </h5>
-    
-    <div>
-      <img id="terminal_png" src="https://gitlab.com/acrome-colab/riders-content/content-media/-/raw/master/ChallengeImages/RRL/Reset.png"
+    <br>
+    <div style="margin-left: 10%; width: 80%;">
+    <img id="sim_screen"src="/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/images/SimScreen.png"
       alt="" title="">
     </div>
 
-    <p> <b>1 numara</b> ile gösterilen butona tıklayarak simülasyonu tekrar başlatabilirsiniz.</p>
-    <p> Terminal butonuna tıklayıp terminali açtıktan sonra <b>2 numara</b> ile gösterilen alanda kod çıktılarınızı görebilirsiniz </p>
+    <h5> <b>1 numara</b> ile gösterilen butona tıklayarak simülasyon kameraları arasında geçiş yapabilirsiniz.</h5>
+    <h5> <b>2 numara</b> ile gösterilen butona tıklayarak terminal ekranını açabilirsiniz.</h5>
+    <h5> <b>3 numara</b> ile gösterilen butona tıklayarak simülasyonu başlatabilirsiniz.</h5>
+    <h5> <b>4 numara</b> ile gösterilen alanda robotunuzun üzerindeki kameranın çıktısını görebilirsiniz.
+    Kamera tek boyut ve 16 pikselden oluşur. Her piksel 0 ve 255 arasında bir parlaklık değerini temsil eder.
+    </h5>
+    <br>
+    <h4>
+        Simülasyon Başladıktan Sonra:
+    </h4>
+    <br>
+    <div style="margin-left: 10%; width: 80%;">
+      <img id="terminal_png" src="/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/images/Terminal.png"
+      alt="" title="">
+    </div>
 
-  
+    <h5> <b>1 numara</b> ile gösterilen butona, eğer robot pisti tamamlamışsa, tıklayarak simülasyonu tekrar başlatabilirsiniz. Robot pisti henüz tamamlamadıysa, buton üzerinde "Stop" ifadesi bulunacaktır. Simülasyonu durdurabilir ve sonra tekrar başlatabilirsiniz.</h5>
+    <h5> Terminal butonuna tıklayıp terminali açtıktan sonra <b>2 numara</b> ile gösterilen alanda kod çıktılarınızı görebilirsiniz </h5>
 
 </section>
