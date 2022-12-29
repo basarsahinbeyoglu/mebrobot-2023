@@ -1,0 +1,89 @@
+
+<section class="active" id="1">
+    <div class="pb-3 mb-4 border-bottom">
+    <div class="d-flex align-items-center text-dark text-decoration-none">
+        <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+        style="margin-right: 10px">
+        <path d="M19.968 15.0184L14.733 0.568564C14.6702 0.38768 14.5167 0.262452 14.3282 0.22071C7.81591 -1.03852 1.48508 3.21921 0.221706 9.71016C-1.04167 16.2011 3.22309 22.5112 9.7354 23.7774C10.4962 23.9235 11.278 24 12.0458 24C12.1225 24 12.1993 24 12.2831 24C12.4436 24 12.5972 23.9165 12.7019 23.7913C12.7996 23.6591 12.8345 23.4921 12.7996 23.3391L11.7945 19.2414C12.0597 19.0257 12.2272 18.6987 12.2272 18.3439C12.2272 17.7038 11.6898 17.189 11.0337 17.189C10.3566 17.189 9.84708 17.7038 9.84708 18.3648C9.84708 18.9213 10.217 19.3666 10.7475 19.4849C10.7475 19.4918 10.7475 19.4918 10.7475 19.4988L11.5851 22.9217C11.0337 22.9008 10.4892 22.8312 9.94479 22.7269C4.01183 21.572 0.123986 15.8254 1.27568 9.91888C2.41341 4.10276 8.00436 0.262452 13.8257 1.22949L18.8093 14.9836L16.5827 16.4029C15.7521 15.5541 13.4487 13.3487 11.4594 12.8548C10.5311 12.6252 9.95875 11.8808 9.64466 11.2894C9.4213 10.872 9.2817 10.4615 9.19794 10.1206C9.53298 9.91192 9.75634 9.54319 9.75634 9.13273C9.75634 8.49267 9.21888 7.97785 8.56276 7.97785C7.8857 7.97785 7.37617 8.49267 7.37617 9.1536C7.37617 9.65451 7.67631 10.058 8.11604 10.225C8.20678 10.6563 8.36034 11.1016 8.53484 11.4912C9.12814 12.7643 10.0704 13.62 11.1942 13.8983C13.3022 14.4201 16.0662 17.4256 16.0941 17.4534C16.2686 17.6482 16.5618 17.683 16.7852 17.5438L19.7516 15.6585C19.968 15.5193 20.0518 15.255 19.968 15.0184Z"
+            fill="#797979"></path> </svg> <span class="fs-4">Yarışma</span> </div>
+    </div>
+  
+    <script>
+        var video_path = window.location.protocol + "//" + window.location.host.replace("-8888.", "-8000.") + "/project/rrl_season_3_exports/documentation/videos/";
+        var image_path = window.location.protocol + "//" + window.location.host.replace("-8888.", "-8000.") + "/project/rrl_season_3_exports/documentation/images/";
+        document.getElementById("score_image").src = String(image_path + "Score.png");
+        document.getElementById("penalty").src = String(image_path + "PenaltyFunction.png");
+        document.getElementById("discord").src = String(image_path + "discord.png");
+    </script>
+    
+    <br>
+    
+    <h4>
+        Skor Formülü:
+      </h4>
+      
+      <p>
+        Skorunuz temel skor (L/t) çarpı ceza katsayısı (p) ile belirlenir.
+        L pistin uzunluğu, t geçen zaman, ve p 0-1 arasında bir sayı (aşağıda detaylandırılmıştır).
+        </p>
+        
+      
+        
+        <div style="margin-left: 30%; width: 50%; max-width: 200px;">
+          <img id="score_image" src="https://gitlab.com/acrome-colab/riders-content/content-media/-/raw/master/ChallengeImages/LineRider/Score.png"
+          alt="" title="">
+      </div>
+      
+        <p>
+        Ceza faktörü (p) aşğıdaki resimde açıklanmıştır.
+        p ceza faktörü skorunuzu çizgiden ne kadar uzak olduğunuza bağlı olarak düşürür.
+        q parametresini, 1/15 m'lik ortalama sapmanın, temel skorunuzu 1/2 azaltacağı şekilde seçtik.
+        Toplam alan (m<sup>2</sup>) Robotun yolu ile pistin yolu arasındaki alandır.
+        </p>
+        
+        <div style="margin-left: 15%; width: 80%; max-width: 400px;">
+          <img id="penalty" src="https://gitlab.com/acrome-colab/riders-content/content-media/-/raw/master/ChallengeImages/LineRider/PenaltyFunction.png" alt="code"
+          alt="" title="">
+      </div>
+      
+        
+        
+      <h4>Durum Göstergeleri:</h4>
+      <p>Ekranın solunda ve start butonunun altında durum göstergeleri bulunmaktadır.</p>
+      
+      <ul>
+        <li><b>Zaman (s):</b> Yarışta geçen süredir. Kısa süreler (t) daha yüksek skor almanızı sağlar
+          
+        </li>
+      
+        <li><b>Toplam Alan (m<sup>2</sup>):</b> Çizgiden saptığınız toplam alanı gösterir.
+          Toplam alanın küçük olması daha yüksek skor almanızı sağlar.
+        </li>
+      
+        <li><b>Diskalifiye Sebebi:</b>
+          <ul>
+              <li><i>Pist Dışı:</i> robot pistin çok dışına çıkmıştır.</li>
+              <li><i>Zaman Bitti:</i> Yarış istenilen sürede (120 s) bitirilmedi.</li>
+          </ul>
+          <p>
+            Eğer diskalifiye olduysanız kodunuz o turdan puan almayacaktır.
+            Kodunuzu diskalifiye olmayacak şekilde güncelleyin
+          </p>
+        </li>
+
+      
+        <li><b>Skor:</b>  İlerlemenize göre güncellenen skor yarışma bitmeden gönderilmeyecektir.
+        </li>
+      </ul>
+      
+      <h4>Sorularınız için: </h4>
+      
+      <p>Discord kanalımızdan iletişime geçin.</p> 
+        <a href="https://discord.gg/GurXkVu3C8"  target=”_blank”><img
+            id="discord"
+            src="https://github.com/basarsahinbeyoglu/MEB/blob/main/discord.png?raw=true"
+      
+            alt="HTML tutorial" style="width:42px;display:inline-flex;padding-bottom:0px;"></a>
+
+
+</section>
