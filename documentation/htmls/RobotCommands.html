@@ -1,40 +1,103 @@
-
-    <section class="active" id="1">
-        <div class="pb-3 mb-4 border-bottom">
+<section class="active" id="1">
+      <div class="pb-3 mb-4 border-bottom">
         <div class="d-flex align-items-center text-dark text-decoration-none">
-            <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+          <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+
             style="margin-right: 10px">
             <path d="M19.968 15.0184L14.733 0.568564C14.6702 0.38768 14.5167 0.262452 14.3282 0.22071C7.81591 -1.03852 1.48508 3.21921 0.221706 9.71016C-1.04167 16.2011 3.22309 22.5112 9.7354 23.7774C10.4962 23.9235 11.278 24 12.0458 24C12.1225 24 12.1993 24 12.2831 24C12.4436 24 12.5972 23.9165 12.7019 23.7913C12.7996 23.6591 12.8345 23.4921 12.7996 23.3391L11.7945 19.2414C12.0597 19.0257 12.2272 18.6987 12.2272 18.3439C12.2272 17.7038 11.6898 17.189 11.0337 17.189C10.3566 17.189 9.84708 17.7038 9.84708 18.3648C9.84708 18.9213 10.217 19.3666 10.7475 19.4849C10.7475 19.4918 10.7475 19.4918 10.7475 19.4988L11.5851 22.9217C11.0337 22.9008 10.4892 22.8312 9.94479 22.7269C4.01183 21.572 0.123986 15.8254 1.27568 9.91888C2.41341 4.10276 8.00436 0.262452 13.8257 1.22949L18.8093 14.9836L16.5827 16.4029C15.7521 15.5541 13.4487 13.3487 11.4594 12.8548C10.5311 12.6252 9.95875 11.8808 9.64466 11.2894C9.4213 10.872 9.2817 10.4615 9.19794 10.1206C9.53298 9.91192 9.75634 9.54319 9.75634 9.13273C9.75634 8.49267 9.21888 7.97785 8.56276 7.97785C7.8857 7.97785 7.37617 8.49267 7.37617 9.1536C7.37617 9.65451 7.67631 10.058 8.11604 10.225C8.20678 10.6563 8.36034 11.1016 8.53484 11.4912C9.12814 12.7643 10.0704 13.62 11.1942 13.8983C13.3022 14.4201 16.0662 17.4256 16.0941 17.4534C16.2686 17.6482 16.5618 17.683 16.7852 17.5438L19.7516 15.6585C19.968 15.5193 20.0518 15.255 19.968 15.0184Z"
-                fill="#797979"></path> </svg> <span class="fs-4">Robot Komutları</span> </div>
-        </div>
 
-        
-        <br>
+              fill="#797979"></path> </svg> <span class="fs-4">Robot Komutları</span></div>
+        <div class="d-flex align-items-center text-dark text-decoration-none"><span
 
-        <h4>
-            Robot Komutları:
-        </h4>
-        <br>
-        <h5>
-            Aşağıda robot komutları listelenmektedir:
-        </h5>
-        <br>
-          <ul>
-            <li><code style="font-family:'Courier New'; font-size: 18px; color:darkblue">robot.is_ok()</code>
-              – Simülasyon çalışırken True değerini verir.</li>
-            <li><code style="font-family:'Courier New'; font-size: 18px; color:darkblue">robot.move(v)</code>
-              – Robotun hızını ayarlar <i>v</i> [metre/saniye].</li>
-            <li><code style="font-family:'Courier New'; font-size: 18px; color:darkblue">robot.rotate(&omega;)</code>
-              – Robotun açısal hızını ayarlar <i>&omega;</i> [radyan/saniye]. Pozitif <i>&omega;</i> saat yönünün tersidir.
-               Negatif <i>&omega;</i> ise saat yönüdür.</li>
-            <li><code style="font-family:'Courier New'; font-size: 18px; color:darkblue">robot.camera_pixel_array()</code>
-              – Kamera görüntüsünden pikselleri okumak için kullanılır.</li>
-            <li><code style="font-family:'Courier New'; font-size: 18px; color:darkblue">robot.sleep(saniye)</code>
-                – girilen saniye kadar bekler.</li>
-            <li><code style="font-family:'Courier New'; font-size: 18px; color:darkblue">robot.time()</code>
-                – Simülasyon zamanını verir.</li>
-          </ul>
-          <br>
-          <h5> Aşağıdaki Next tuşuna basarak bir sonraki bölüme geçelim.</h5>
-          <br>
+            class="fs-4"><br>
+          </span> </div>
+      </div>
+      
+      <h5>Aşağıdaki resimde robotumuz üzerinde yer alan sensörler ve bu sensörlerin komutları yer almaktadır. Robotumuzun üzerinde 4 adet mesafe sensörü ve ve alt köşelerinde yer alan siyah ve beyaz rengi ayırt edebilen 4 adet renk sensörü bulunmaktadır.</h5>
+
+      <p></p>
+        <img src="/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/images/Sumo_Commands.png"
+
+          alt="" title="MEB Sumo Sensorler">
+      <p></p>
+      <h5>Şimdi robotun komutlarını açıklamalarıyla birlikte inceleyelim:
+            <br>
+      </h5>
+      <p></p>
+    <table style="width: 100%;" border="1">
+      <style>
+      table, th, td {
+        border: 1px solid black;
+      }
+      </style>
+      <tbody>
+        <tr>
+          <td><b>Python Kodu</b></td>
+          <td><b>Açıklaması</b></td>
+        </tr>
+        <tr>
+          <td style="height: 20px; width: 229.483px;"><em style="color: red;">robot.is_ok()</em></td>
+          <td style="width: 445.65px;">Robotun ve simülasyonun çalışması
+            durumunda True, çalışmıyor olması durumunda False değerini alır.</td>
+        </tr>
+        <tr>
+          <td><em style="color: red;">robot.move(x)</em></td>
+          <td>Robotu ileriye doğru x ile girilen nümerik değer hızında (m/s)
+            hareket ettirir. x pozitif ise robot ileriye gider, negatifse geriye
+            doğru gider.</td>
+        </tr>
+        <tr>
+          <td style="height: 60px;"><em style="color: red;">robot.rotate(x)</em></td>
+          <td>Robotu olduğu yerde x ile girilen nümerik değer hızında (radyan/s)
+            döndürür. x negatif ise robot saat yönünde, pozitifse ters yönde
+            döner.</td>
+        </tr>
+        <tr>
+          <td><em style="color: red;">robot.sleep(x)</em></td>
+          <td>x saniye süre boyunca kodu uyutur.</td>
+        </tr>
+        <tr>
+          <td><em style="color: red;">robot.front()</em> </td>
+          <td>Ön mesafe sensörünün verisini metre cinsinden float değer olarak
+            verir.<br>
+          </td>
+        </tr>
+        <tr>
+          <td><em style="color: red;">robot.left()</em> </td>
+          <td>Sol mesafe sensörünün verisini metre cinsinden float değer olarak
+            verir.</td>
+        </tr>
+        <tr>
+          <td><em style="color: red;">robot.right()</em></td>
+          <td>Sağ mesafe sensörünün verisini metre cinsinden float değer olarak
+            verir.</td>
+        </tr>
+        <tr>
+          <td><em style="color: red;">robot.back()</em></td>
+          <td>Arka mesafe sensörünün verisini metre cinsinden float değer olarak
+            verir.</td>
+        </tr>
+        <tr>
+          <td><em style="color: red;">robot.front_left_color()</em></td>
+          <td>Robotun sol ön renk sensörünün algıladığı renk bilgisini 0 (siyah)
+            ve 1 (beyaz) olarak verir.</td>
+        </tr>
+        <tr>
+          <td><em style="color: red;"></em><em style="color: red;">robot.front_right_color()</em></td>
+          <td>Robotun sağ ön renk sensörünün algıladığı renk bilgisini 0 (siyah)
+            ve 1 (beyaz) olarak verir.</td>
+        </tr>
+        <tr>
+          <td><em style="color: red;">robot.back_left_color()</em></td>
+          <td>Robotun sol arka renk sensörünün algıladığı renk bilgisini 0
+            (siyah) ve 1 (beyaz) olarak verir. </td>
+        </tr>
+        <tr>
+          <td><em style="color: red;"></em><em style="color: red;">robot.back_right_color()</em>
+          </td>
+          <td>Robotun sağ arka renk sensörünün algıladığı renk bilgisini 0
+            (siyah) ve 1 (beyaz) olarak verir. </td>
+        </tr>
+      </tbody>
+    </table>
     </section>
