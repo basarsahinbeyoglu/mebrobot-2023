@@ -5,68 +5,75 @@
         <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg"
         style="margin-right: 10px">
         <path d="M19.968 15.0184L14.733 0.568564C14.6702 0.38768 14.5167 0.262452 14.3282 0.22071C7.81591 -1.03852 1.48508 3.21921 0.221706 9.71016C-1.04167 16.2011 3.22309 22.5112 9.7354 23.7774C10.4962 23.9235 11.278 24 12.0458 24C12.1225 24 12.1993 24 12.2831 24C12.4436 24 12.5972 23.9165 12.7019 23.7913C12.7996 23.6591 12.8345 23.4921 12.7996 23.3391L11.7945 19.2414C12.0597 19.0257 12.2272 18.6987 12.2272 18.3439C12.2272 17.7038 11.6898 17.189 11.0337 17.189C10.3566 17.189 9.84708 17.7038 9.84708 18.3648C9.84708 18.9213 10.217 19.3666 10.7475 19.4849C10.7475 19.4918 10.7475 19.4918 10.7475 19.4988L11.5851 22.9217C11.0337 22.9008 10.4892 22.8312 9.94479 22.7269C4.01183 21.572 0.123986 15.8254 1.27568 9.91888C2.41341 4.10276 8.00436 0.262452 13.8257 1.22949L18.8093 14.9836L16.5827 16.4029C15.7521 15.5541 13.4487 13.3487 11.4594 12.8548C10.5311 12.6252 9.95875 11.8808 9.64466 11.2894C9.4213 10.872 9.2817 10.4615 9.19794 10.1206C9.53298 9.91192 9.75634 9.54319 9.75634 9.13273C9.75634 8.49267 9.21888 7.97785 8.56276 7.97785C7.8857 7.97785 7.37617 8.49267 7.37617 9.1536C7.37617 9.65451 7.67631 10.058 8.11604 10.225C8.20678 10.6563 8.36034 11.1016 8.53484 11.4912C9.12814 12.7643 10.0704 13.62 11.1942 13.8983C13.3022 14.4201 16.0662 17.4256 16.0941 17.4534C16.2686 17.6482 16.5618 17.683 16.7852 17.5438L19.7516 15.6585C19.968 15.5193 20.0518 15.255 19.968 15.0184Z"
-            fill="#797979"></path> </svg> <span class="fs-4">Yarışma</span> </div>
+            fill="#797979"></path> </svg> <span class="fs-4">Müsabaka Kuralları ve Puanlama</span> </div>
     </div>
       
     <br>
     
     <h4>
-        Skor Formülü:
+        Müsabakaya Dair Önemli Açıklamalar:
       </h4>
       
+      <h6>
+        <ul>
+            <li>
+                Her müsabaka 16 rounddan oluşmaktadır.
+                </li>
+            <li>
+                Beyaz halkadan dışarı çıkarak düşen ilk robot roundu kaybeder.
+                </li>
+            <li>
+                Eğer yarışmacı robot roundun kazananı değilse, ilgili rounddan puan alamaz.
+                </li>
+            <li>
+                Eğer 60 saniye içerisinde kazanan belli olmazsa, round sonlanır. Robotlar bir sonraki round için dohyo üzerine yeniden yerleştirilirler. Kazanan olmadığından, yarışmacı robot bu rounddan puan almayacaktır.
+                </li>
+            <li>
+                Elde edilen skor, müsabakanın kazananına bağlı değildir. Yapay zeka robot daha fazla round kazanmış olsa dahi, 16 round sonucu elde edilen skor geçerli bir skordur. 
+                </li>
+            <li>
+                Elde edilen skorun geçerli olabilmesi için 16 roundun tamamlanması gerekmektedir. 
+                </li>
+        </ul>
+      </h6>
       <h5>
-        Skorunuz aşağıdaki formüle göre hesaplanmaktadır:
-        L pistin uzunluğu, t geçen zaman ve p 0-1 arasında bir ceza katsayısıdır. (Aşağıda detaylandırılmıştır).
-        Buna göre elde ettiğiniz temel skor (L/t) bir ceza katsayısı (p) ile çarpıldıktan sonra 50 ile çarpılarak aldığınız skor 0-100 arasına getirilir.
+      Yarışmacı robotun müsabakadan aldığı skor aşağıdaki formüle göre hesaplanır:
       </h5>
         
-      
-        
         <div style="margin-left: 10%; width: 80%;">
-          <img id="score_image" src="/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/images/Skor.png"
+          <img id="score_image" src="/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/images/Sumo_Formul.png"
           alt="" title="">
       </div>
       
         <h5>
-        Ceza faktörü (p) aşğıdaki resimde açıklanmıştır.
-        p ceza faktörü, skorunuzu çizgiden ne kadar uzak olduğunuza bağlı olarak düşürür.
-        q parametresi, 1/15 m'lik ortalama sapmanın, temel skorunuzu 1/2 azaltacağı şekilde seçilmiştir.
-        Toplam alan (m<sup>2</sup>) robotun izlediği yol ile pistin arasındaki alandır.
+        Yukarıdaki formüle göre, robotun müsabakadan aldığı skor; robotun kazandığı round sayısının karesinin, 
+        robotun kazandığı roundlardaki toplam geçen sürenin 0.25 üsteline (T<sup>1/4</sup>) bölünmesi ile hesaplanmaktadır. 
+        <b>(Robotun kaybettiği roundlardaki süre dikkate alınmamaktadır.) </b>
+        Formülden anlaşılacağı üzere, robotun kaç round kazandığı, robotun roundu kazanma süresinden çok daha önemlidir. 
+        Dolayısıyla, algoritmanızı geliştirirken daha fazla round kazanmayı önceliklendirmeniz, alacağınız skorun daha iyi olmasını sağlayacaktır. 
         </h5>
-        
-        <div style="margin-left: 10%; width: 80%;">
-          <img id="penalty" src="/mini-browser//workspace/src/_lib/mebrobot-2023/documentation/images/PenaltyFunction.png" alt="code"
-          alt="" title="">
-      </div>
-      
         
         
       <h4>Durum Göstergeleri:</h4>
-      <h5>Ekranın solunda ve start butonunun altında durum göstergeleri bulunmaktadır.</h5>
+      <h5>Ekranın üst kısmında bulunan durum göstergeleri aşağıda açıklanmaktadır.</h5>
       
       <ul>
-        <li><b>Zaman (s):</b> Yarışta geçen süredir. Kısa süreler (t) daha yüksek skor almanızı sağlar
+        <li><b>Skor:</b> Müsabakada o ana kadar elde edilen skor değerini verir. Bu skor 16 round tamamlandıktan sonra geçerli olur. 
           
         </li>
       
-        <li><b>Toplam Alan (m<sup>2</sup>):</b> Çizgiden saptığınız toplam alanı gösterir.
-          Toplam alanın küçük olması daha yüksek skor almanızı sağlar.
+        <li><b>Round:</b> Müsabakanın o anda hangi roundda olduğunu belirten göstergedir.
         </li>
-      
-        <li><b>Diskalifiye Sebebi:</b>
+        <li><b>Zaman:</b>  İçinde bulunulan rounddaki geçen süreyi belirten göstergedir. Round sonlandığında zaman durur. Yeni round başladığında ise zaman sıfırlanır.
+        </li>
+        <li><b>Kazanan:</b>
           <ul>
-              <li><i>Pist Dışı:</i> robot pistin çok dışına çıkmıştır.</li>
-              <li><i>Zaman Bitti:</i> Yarış istenilen sürede (120 s) bitirilmedi.</li>
+              <li><i>Robot:</i> Yarışmacı robotun kazandığı round sayısını verir.</li>
+              <li><i>AI:</i> Yapay zeka robotun kazandığı round sayısını verir.</li>
           </ul>
-          <p>
-            Eğer diskalifiye olduysanız kodunuz o turdan puan almayacaktır.
-            Kodunuzu diskalifiye olmayacak şekilde güncelleyin
-          </p>
         </li>
 
-      
-        <li><b>Skor:</b>  İlerlemenize göre güncellenen skor yarışma bitmeden gönderilmeyecektir.
-        </li>
+    
       </ul>
       
       <h4>Sorularınız için: </h4>
